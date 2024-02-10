@@ -20,12 +20,12 @@ export default async function handler() {
                     alignItems: "center",
                 }}
             >
-                Paz - Paix - Frieden - Pace - Мир - 平和 - 和平 - سلام - शांति
+                Paz - Paix - Frieden - Pace - Мир - 平和 - שלום - سلام
             </div>
         ),
         {
             width: 1200,
-            height: 630,
+            height: 628,
         }
     );
 }
