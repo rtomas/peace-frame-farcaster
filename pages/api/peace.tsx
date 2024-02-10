@@ -20,7 +20,7 @@ export default async function handler() {
                     alignItems: "center",
                 }}
             >
-                Paz - Paix - Frieden - Pace - Мир - 平和 - שלום - سلام
+                Paz
             </div>
         ),
         {
