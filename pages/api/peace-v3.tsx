@@ -6,6 +6,30 @@ export const config = {
 };
 
 export default async function handler() {
+    // read colors.json and show 7 random colors
+    const colors = require("../data/colors.json");
+    // pick 7 random colors
+    const randomColors = colors.sort(() => 0.5 - Math.random()).slice(0, 7);
+    // iterate all the colors
+    const colorDivs = randomColors.map((color: any, index: number) => (
+        <div
+            key={index}
+            style={{
+                display: "block",
+                fontSize: 40,
+                color: "black",
+                background: color.hex,
+                width: "100%",
+                height: "89px",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            {color.name}
+        </div>
+    ));
+
     return new ImageResponse(
         (
             <div
@@ -16,38 +40,7 @@ export default async function handler() {
                     height: "100%",
                 }}
             >
-                <div
-                    style={{
-                        display: "block",
-                        fontSize: 40,
-                        color: "black",
-                        background: "#F0F8FF",
-                        width: "100%",
-                        height: "15",
-                        padding: "50px 200px",
-                        textAlign: "center",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                    Tranquil Dawn
-                </div>
-                <div
-                    style={{
-                        display: "block",
-                        fontSize: 40,
-                        color: "black",
-                        background: "#AEC6CF",
-                        width: "100%",
-                        height: "15",
-                        padding: "50px 200px",
-                        textAlign: "center",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                    Serenity Blue
-                </div>
+                {colorDivs}
             </div>
         ),
         {
