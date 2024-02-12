@@ -20,8 +20,15 @@ export default async function handler(req: NextRequest) {
         <meta property="fc:frame:button:2:target" content="https://www.tomasrawski.com.ar/projects/peace-colors.html" />
         <meta property="fc:frame:post_url" content="https://peace-frame-farcaster.vercel.app/api/home" />
         </head>
+        <body>
+        <image src="https://peace-frame-farcaster.vercel.app/api/peace-v3?${Math.random()}">
+        </body>
     </html>
 `;
 
-    return new NextResponse(text);
+    return new NextResponse(text, {
+        headers: {
+            "Content-Type": "text/html",
+        },
+    });
 }
