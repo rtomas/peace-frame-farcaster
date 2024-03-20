@@ -12,6 +12,10 @@ View online: https://warpcast.com/rtomas/0x1fb01882
 2. Run `npm install`
 3. Run `npm run dev`
 
+## Check the frame
+
+https://peace-frame-farcaster.vercel.app/api/home
+
 ## Validate the frame
 
 The frame can be check is this site : https://warpcast.com/~/developers/frames
