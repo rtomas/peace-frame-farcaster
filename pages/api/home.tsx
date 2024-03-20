@@ -10,6 +10,7 @@ export default async function handler(req: NextRequest) {
     <!DOCTYPE html>
     <html>
         <head>
+        <meta property="of:accepts:xmtp" content="2024-02-01" />
         <meta property="og:title" content="Colors for the peace" />
         <meta property="og:image" content="https://peace-frame-farcaster.vercel.app/paz.jpg" />
         <meta property="fc:frame" content="vNext" />
